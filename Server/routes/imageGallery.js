@@ -20,7 +20,7 @@ const upload = multer({ storage: storage });
 
 router.get("/", (req, res) => {
     //read images folder
-    fs.readdir("images", (err, files) => {
+    fs.readdir("public/images", (err, files) => {
         if (err) {
             throw err;
         };
