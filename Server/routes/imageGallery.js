@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const fs = require("fs");
+const path = require("path");
 const { checkAuth } = require("../middlewares/checkAuth");
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -19,12 +20,18 @@ const upload = multer({ storage: storage });
 
 router.get("/", (req, res) => {
     //read images folder
-    fs.readdir("public/images", (err, files) => {
-        if (err) {
-            throw err;
-        };
-        res.status(200).json(files);
-    })
+    // fs.readdir("public/images", (err, files) => {
+    //     if (err) {
+    //         throw err;
+    //     };
+    //     res.status(200).json(files);
+    // })
+
+    const file = path.join(process.cwd(), 'public/images');
+    const stringified = fs.readdirSync(file, 'utf8');
+
+    res.setHeader('Content-Type', 'multipart/form-data');
+    return res.end(stringified);
 
 });
 
