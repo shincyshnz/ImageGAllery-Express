@@ -28,6 +28,7 @@ router.get("/", (req, res) => {
     // })
 
     const file = path.join(process.cwd(), 'public/images');
+    console.log(cwd(), "==working dir");
     const stringified = fs.readdirSync(file, 'utf8');
 
     res.setHeader('Content-Type', 'multipart/form-data');
