@@ -4,8 +4,8 @@ import axios from "axios";
 import { ProgressBar } from "./components/ProgressBar/ProgressBar";
 import { Modal } from "./components/Modal/Modal";
 
-const API_URL = "http://localhost:3008";
-// const API_URL = "https://image-gallery-node-back-end.vercel.app";
+// const API_URL = "http://localhost:3008";
+const API_URL = "https://gallery-backend-dusky.vercel.app/";
 
 function App() {
   const [galleryImages, setGalleryImages] = useState([]);
