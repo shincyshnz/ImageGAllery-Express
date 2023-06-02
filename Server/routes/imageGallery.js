@@ -27,9 +27,9 @@ router.get("/", (req, res) => {
     //     res.status(200).json(files);
     // })
 
-    const file = path.join(process.cwd(), 'public/images');
-    console.log(file);
-    const stringified = fs.readdirSync(file, 'utf8');
+    // const file = path.join(process.cwd(), 'public/images');
+    // console.log(file);
+    const stringified = fs.readdirSync('public/images', 'utf8');
 
     res.setHeader('Content-Type', 'multipart/form-data');
     // return res.end(stringified);
