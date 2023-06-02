@@ -56,4 +56,4 @@ npm i multer
 
 ![alt text](./ProjectImage.png "Image Gallery Front End")
 
-live link : [https://image-gallery-node-front-end.vercel.app/].
+live link : [https://gallery-frontend-nine.vercel.app/].
