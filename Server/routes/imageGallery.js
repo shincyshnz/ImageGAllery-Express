@@ -18,13 +18,14 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.get("/", (req, res) => {
-    // read images folder
+    //read images folder
     fs.readdir("public/images", (err, files) => {
         if (err) {
             throw err;
         };
         res.status(200).json(files);
     })
+
 });
 
 // Specific middleware

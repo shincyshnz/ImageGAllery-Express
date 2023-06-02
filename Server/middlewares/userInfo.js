@@ -13,14 +13,16 @@ const userInfo = (req, res, next) => {
     userinfoLog.push(newData);
     // console.log(userData);
 
-    fs.writeFile("LogUserInfo/userinfoLog.json", JSON.stringify(userinfoLog), (err) => {
-        if (err) {
-            res.status(400).json({
-                message: err
-            });
-        }
-        console.log("User Data inserted");
-    });
+    /* -- Commenting because vercel do not support writing file,since vercel is serverless ---*/
+
+    // fs.writeFile("LogUserInfo/userinfoLog.json", JSON.stringify(userinfoLog), (err) => {
+    //     if (err) {
+    //         res.status(400).json({
+    //             message: err
+    //         });
+    //     }
+    //     console.log("User Data inserted");
+    // });
 
     next();
 };
