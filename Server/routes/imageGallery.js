@@ -29,7 +29,7 @@ router.get("/", (req, res) => {
 
     // const file = path.join(process.cwd(), 'public/images');
     // console.log(file);
-    const stringified = fs.readdirSync('public/images', 'utf8');
+    const stringified = fs.readdirSync('https://gallery-backend-dusky.vercel.app/images', 'utf8');
 
     res.setHeader('Content-Type', 'multipart/form-data');
     // return res.end(stringified);
