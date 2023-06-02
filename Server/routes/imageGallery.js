@@ -28,8 +28,8 @@ router.get("/", (req, res) => {
     // })
 
     const file = path.join(process.cwd(), 'images');
-    console.log(file);
-    const stringified = fs.readdirSync('file', 'utf8');
+    // console.log(file);
+    const stringified = fs.readdirSync(file, 'utf8');
 
     res.setHeader('Content-Type', 'multipart/form-data');
     // return res.end(stringified);
