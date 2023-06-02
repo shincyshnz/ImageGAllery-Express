@@ -28,11 +28,12 @@ router.get("/", (req, res) => {
     // })
 
     const file = path.join(process.cwd(), 'public/images');
-    console.log(cwd(), "==working dir");
+    console.log(file);
     const stringified = fs.readdirSync(file, 'utf8');
 
     res.setHeader('Content-Type', 'multipart/form-data');
-    return res.end(stringified);
+    // return res.end(stringified);
+    res.status(200).json(stringified);
 
 });
 
