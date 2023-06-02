@@ -6,11 +6,12 @@ const userinfoLog = require("../LogUserInfo/userinfoLog.json");
 const userInfo = (req, res, next) => {
     console.log("Inside Application Level middleware");
 
-    const newData = {
-        "url": req.url,
-        "method": req.method
-    };
-    userinfoLog.push(newData);
+    // const newData = {
+    //     "url": req.url,
+    //     "method": req.method
+    // };
+    // userinfoLog.push(newData);
+
     // console.log(userData);
 
     /* -- Commenting because vercel do not support writing file,since vercel is serverless ---*/
