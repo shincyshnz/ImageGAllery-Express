@@ -1,0 +1,23 @@
+.progress-bar {
+  margin: 27px auto;
+  height: 12px;
+  width: 946px;
+  max-width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #efd9c2;
+}
+.filler {
+  background-color: #efd9c2;
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+@keyframes width {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
