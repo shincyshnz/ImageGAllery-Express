@@ -30,7 +30,7 @@ router.get("/", (req, res) => {
     const file = path.join(process.cwd(), 'images');
     const stringified = fs.readdir(file, 'utf8');
 
-    res.setHeader('Content-Type', 'image/.*');
+    // res.setHeader('Content-Type', 'image/.*');
     // return res.end(stringified);
     return res.status(200).json(stringified);
 
