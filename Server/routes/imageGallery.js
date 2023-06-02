@@ -27,7 +27,8 @@ router.get("/", (req, res) => {
     //     res.status(200).json(files);
     // })
 
-    const file = path.join(process.cwd(), 'images');
+    // const file = path.join(process.cwd(), 'images');
+    const file = path.join(__dirname, '/images');
     // console.log(file);
     const stringified = fs.readdirSync(file, 'utf8');
 
