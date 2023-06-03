@@ -20,19 +20,19 @@ const upload = multer({ storage: storage });
 
 router.get("/", (req, res) => {
     //read images folder
-    fs.readdir("public/images", (err, files) => {
-        if (err) {
-            throw err;
-        };
-        res.status(200).json(files);
-    })
+    // fs.readdir("public/images", (err, files) => {
+    //     if (err) {
+    //         throw err;
+    //     };
+    //     res.status(200).json(files);
+    // })
 
-    // const file = path.join(process.cwd(), '/images');
-    // const stringified = fs.readdir(file, 'utf8');
+    const file = path.join(process.cwd(), 'public');
+    const stringified = fs.readdirSync(file + '/images', 'utf8');
 
     // res.setHeader('Content-Type', 'image/.*');
-    // // return res.end(stringified);
-    // return res.status(200).json(stringified);
+    // return res.end(stringified);
+    return res.status(200).json(stringified);
 
 });
 
