@@ -55,5 +55,3 @@ npm i multer
 #### Note:Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files.
 
 ![alt text](./ProjectImage.png "Image Gallery Front End")
-
-live link : [https://gallery-frontend-nine.vercel.app/].
