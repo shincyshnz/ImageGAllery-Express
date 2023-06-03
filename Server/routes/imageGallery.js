@@ -17,6 +17,7 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({ storage: storage });
+let imagesList = ["upload-files-1685710970705-99901461.jpg"];
 
 router.get("/", (req, res) => {
     //read images folder
@@ -27,12 +28,14 @@ router.get("/", (req, res) => {
     //     res.status(200).json(files);
     // })
 
-    const file = path.join(process.cwd(), 'public');
-    const stringified = fs.readdirSync(file + '/images', 'utf8');
+    // const file = path.join(process.cwd(), 'public');
+    // const stringified = fs.readdirSync(file + '/images', 'utf8');
 
-    // res.setHeader('Content-Type', 'image/.*');
-    // return res.end(stringified);
-    return res.status(200).json(stringified);
+    // // res.setHeader('Content-Type', 'image/.*');
+    // // return res.end(stringified);
+    // return res.status(200).json(stringified);
+
+    res.status(200).json(imagesList);
 
 });
 
@@ -42,6 +45,7 @@ router.post("/upload", upload.array("upload-files", 12), [checkAuth], (req, res)
         const files = req.files.map((file) => {
             return file.filename
         });
+        imagesList.push(...files);
         res.status(200).json(files);
     }
 });
