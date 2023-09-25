@@ -2,6 +2,9 @@
 
 An Image Gallery built with React,NodeJs and Multer. At the server side used the concept of middleware nad express routers. The express.Router() function is used to create a new router object. This function is used when you want to create a new router object in your program to handle requests. In this project both GET and POST are handled inside the 'routes/imageGallery.js'. The User-Info is logged using application specific middleware.The multer package is used for handling image upload.
 
+# Live Demo 
+[https://image-g-allery-express.vercel.app/](https://image-g-allery-express.vercel.app/)
+
 ## Technologies Used
 
 - React
